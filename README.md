@@ -4,7 +4,8 @@ This Create React App project makes use of the [Random API](https://randomuser.m
 
 ## Demo
 
-You can view the [DEMO](https://randomuser.pages.dev) here
+You can view the [DEMO](https://randomuser.pages.dev) here.\
+The Project was first designed in [Figma](https://www.figma.com/file/59JmqMYHWmnq5DJiVJUoO5/Ian-Aleck's-Randomuser?node-id=0%3A1)
 
 ## Sample
 

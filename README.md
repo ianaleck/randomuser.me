@@ -1,6 +1,14 @@
-# Read
+# RandomUser API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Create React App project makes use of the [Random API](https://randomuser.me/documentation) to generate random user and display them in cards. Each user is then compared to a country and for that we use the [Rest Countries API](https://restcountries.com)
+
+## Demo
+
+You can view the [DEMO](https://randomuser.pages.dev) here
+
+## Sample
+
+![Random API Demo](https://randomuser.pages.dev/screenshot.png)
 
 ## Available Scripts
 

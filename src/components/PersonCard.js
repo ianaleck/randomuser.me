@@ -69,7 +69,7 @@ export default function PersonCard({ person }) {
         )}
       />
 
-      <Stack justify={"space-between"}>
+      <Stack justify={"space-between"} h="100%">
         <Stack p="3" spacing="0">
           <Flex align="center" justify="space-between">
             <Text

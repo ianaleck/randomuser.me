@@ -68,45 +68,48 @@ export default function PersonCard({ person }) {
           person?.gender === "male" ? "blue.800" : "pink.800"
         )}
       />
-      <Stack p="3" spacing="0">
-        <Flex align="center" justify="space-between">
-          <Text
-            fontSize={"sm"}
-            color={useColorModeValue(
-              person?.gender === "male" ? "blue.500" : "pink.500",
-              person?.gender === "male" ? "blue.50" : "pink.50"
-            )}
+
+      <Stack justify={"space-between"}>
+        <Stack p="3" spacing="0">
+          <Flex align="center" justify="space-between">
+            <Text
+              fontSize={"sm"}
+              color={useColorModeValue(
+                person?.gender === "male" ? "blue.500" : "pink.500",
+                person?.gender === "male" ? "blue.50" : "pink.50"
+              )}
+              _groupHover={{ color: useColorModeValue("gray.50", "gray.50") }}
+            >
+              {person?.name?.title}
+            </Text>
+            <Badge colorScheme={person?.gender === "male" ? "blue" : "pink"}>
+              {person?.gender}
+            </Badge>
+          </Flex>
+          <Heading
+            size="sm"
+            color={useColorModeValue("gray.700", "gray.50")}
             _groupHover={{ color: useColorModeValue("gray.50", "gray.50") }}
-          >
-            {person?.name?.title}
-          </Text>
-          <Badge colorScheme={person?.gender === "male" ? "blue" : "pink"}>
-            {person?.gender}
-          </Badge>
-        </Flex>
-        <Heading
-          size="sm"
-          color={useColorModeValue("gray.700", "gray.50")}
-          _groupHover={{ color: useColorModeValue("gray.50", "gray.50") }}
-        >{`${person?.name?.first} ${person?.name?.last} ${flag}`}</Heading>
-        <HStack
-          pt="1"
-          fontSize={"0.7em"}
-          color="gray.500"
-          _groupHover={{ color: useColorModeValue("gray.50", "gray.50") }}
-        >
-          <GoLocation />
-          <Text
+          >{`${person?.name?.first} ${person?.name?.last} ${flag}`}</Heading>
+          <HStack
+            pt="1"
+            fontSize={"0.7em"}
             color="gray.500"
             _groupHover={{ color: useColorModeValue("gray.50", "gray.50") }}
-          >{`${person?.location?.city} ${person?.location?.country}`}</Text>
-        </HStack>
-      </Stack>
+          >
+            <GoLocation />
+            <Text
+              color="gray.500"
+              _groupHover={{ color: useColorModeValue("gray.50", "gray.50") }}
+            >{`${person?.location?.city} ${person?.location?.country}`}</Text>
+          </HStack>
+        </Stack>
 
-      <Flex justify="space-between" align="end">
-        <PeopleDetailed flag={flag} person={person} />
-        <PersonAvatar size="lg" person={person} />
-      </Flex>
+        <Flex justify="space-between" align="end">
+          <PeopleDetailed flag={flag} person={person} />
+          <PersonAvatar size="lg" person={person} />
+        </Flex>
+      </Stack>
     </Stack>
   );
 }
